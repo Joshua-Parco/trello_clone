@@ -1,5 +1,8 @@
 <h1><%= @board.name %></h1>
-<h4>Name: <%= @list.name %></h4>
+<h4>List: <%= @list.name %></h4>
+<br />
+<%= link_to 'Add Task', new_list_task_path(@list), class: "ui button blue" %>
+<br />
 <br />
 <%= link_to 'Edit list', edit_board_list_path([@board, @list]) %> |
 <%= link_to 'Delete list', [@board, @list], method: :delete %> |

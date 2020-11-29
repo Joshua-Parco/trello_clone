@@ -7,6 +7,7 @@ class ListsController < ApplicationController
   end
 
   def show
+    redirect_to list_tasks_path(params[:id])
   end
 
   def new

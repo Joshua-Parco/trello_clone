@@ -1,2 +1,5 @@
-<h1>Tasks#new</h1>
-<p>Find me in app/views/tasks/new.html.erb</p>
+<h1>New task</h1>
+
+<%= render "form", list: @list, task: @task %>
+
+<%= link_to "Back", list_tasks_path(@list) %>

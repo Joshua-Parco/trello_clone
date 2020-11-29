@@ -1,11 +1,10 @@
 <%= button_to "Log Out", destroy_user_session_path, method: :delete %>
-<h2>Welcome <%= current_user.first_name %></h2>
+<h1>Welcome <%= current_user.first_name %></h1>
 <hr />
 <%= link_to "Add Board", new_board_path %>
-<h3 class="ui header">Your Boards</h3>
+<h2 class="ui header">Your Boards</h2>
 <% @boards.each do |board| %>
-  <h1><%= board.name %></h1>
-  <%= link_to "Show", board_path(board) %>
+  <h3><%= link_to board.name, board_path(board) %></h3>
   <%= link_to "Edit", edit_board_path(board) %>
-  <%= link_to "Destroy", board_path(board), method: :delete %>
+  <%= link_to "Delete", board_path(board), method: :delete %>
 <% end %>
