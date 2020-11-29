@@ -6,6 +6,7 @@ class BoardsController < ApplicationController
   end
 
   def show
+    redirect_to board_lists_path(params[:id])
   end
 
   def new
